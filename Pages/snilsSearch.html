@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html>
+    
+<head>
+    <meta charset="utf-8">
+    <link rel="stylesheet" type="text/css" href="first.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap" rel="stylesheet">
+<title>
+    shadow keep
+</title>
+</head>
+
+
+<body>
+
+    
+    <div class="page">
+        <div class="container">
+        
+                <div class="text">
+                    <img src="assets/logo.png" alt=""> <p> Веб-сервис, предназначенный для мониторинга солгасий о зачислений.</p>
+                </div>
+            
+            <div class="screen">
+                <div class="screen__content">
+                    <form class="login">
+                        <div class="login__field">
+                            <input type="text" class="login__input" placeholder="СНИЛС">
+                            <button onclick="test_assign()" class="button login__submit">
+                                <span>Найти</span>
+                        </div>	
+                        
+                        </button>
+                    </form>
+                    
+                    
+                </div>
+            </div>
+        </div>
+
+            
+            
+    </div>
+
+    <script>
+        function test_assign() {
+          document.location.assign("./second_page.html", "_self");
+        }
+      </script>
+
+</body>
+
+
+</html>

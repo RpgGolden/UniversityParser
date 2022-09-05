@@ -1,0 +1,84 @@
+html {
+  background-image: url(background.jpg);
+  /*border: 2px solid red;*/
+  height: 100%;
+}
+
+body {
+  font-family: 'Montserrat', sans-serif;
+  color: #fff;
+  height: 100%;
+  width: 100%;
+  /*border:  2px solid red;*/
+}
+
+table {
+  text-align: center;
+  margin: 20px auto;
+  /*border: 3px solid black;*/
+  width: 90%;
+  height: 100%;
+  background: #A5B3BE;
+  border-radius: 15px 0px 15px 15px;
+  border-spacing: 0;
+}
+
+#nick {
+  border: 1px solid;
+  border-radius: 10px 0px 10px 0px;
+  box-shadow: 0.4em 0.4em 5px rgba(122,122,122,0.5);
+  background: linear-gradient(to left, #404362, #96A2B2);
+  height: 130px;
+  border: none;
+}
+
+
+.container {
+  margin: 1px 2px 1px 2px;
+  /*border: 3px solid yellow;*/
+  height: 80%;
+  display: flex;
+}
+
+.head {
+  padding-left: 190px;
+  width: 450px;
+  height: 55px;
+  line-height: 0.9;
+}
+
+thead {
+  height: 130px;
+  font-size: 20px;
+  font-weight: lighter;
+}
+
+.first {
+  height: 80px;
+  border-top: none;
+}
+
+tbody {
+  color:black;
+  padding-top: 30px;
+}
+
+th,
+td {
+    border: 1px solid white;
+    border-top: none;
+}
+
+td {
+  border-bottom: none;
+  vertical-align: top;
+}
+
+.line1 {
+  border-left: none;
+}
+
+.line2 {
+  border-right: none;
+}
+

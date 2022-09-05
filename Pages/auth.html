@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" type="text/css" href="auth.css">
+    <link href="index1.html">
+
+</head>
+<body>
+    <div class="logo-holder">
+        
+           
+            
+        <p class="title"> <img class="logo" role="presentation" src="assets/logo.png" >     Веб-сервис парсинга данных абитуриентов.</p> 
+     </div>
+
+    <form class="form_auth_block" method="POST">
+        <div class="form_auth_block_content" method="POST">
+
+            <label>Введите адрес элетронной почты.</label>
+            <p><input type="email" class="auth_email" placeholder="Email" name="email" required></p> 
+            <label>Введите Ваш пароль</label>
+            <p><input type="password" id="password" placeholder="Enter your password" name="auth_pass" required minlength="8" maxlength="30" required></p>
+            <div class="form_sumbit">
+                <button  type="submit" name="submit" class = "form_auth_button"required>Войти</button>
+            </div>
+        </div> 
+    </form>
+    
+    <div class="footer">
+        &copy; Shadow Keep 2022
+       </div>
+</body>
+</html>

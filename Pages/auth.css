@@ -1,0 +1,172 @@
+body{
+    background: url("background.jpg");;
+}
+
+
+.logo-holder{
+    
+    margin-left: auto;
+    margin-right: auto;
+    padding-bottom: 20px;
+    max-width: 485px;
+    height: 99px;
+    width: calc(100% - 2px);
+
+}
+.logo{
+    float: left;
+    padding-right: 20px;
+}
+.title{
+    font-family: 'Montserrat', sans-serif;
+    font-size: 20px;
+    font-weight: 800;
+    line-height: 50px;
+    color: #000;
+    opacity: 0.8;
+
+}
+@media (max-width: 480px) {
+    .title {
+        font-size: 0px;
+    }
+    .logo-holder{
+        margin-left: 40%;
+        position:relative;
+    }
+}
+
+
+
+.form_auth_block {
+    margin-left: auto;
+    margin-right: auto;
+    position: calc(100%+10px);
+    max-width: 400px;
+    width: calc(100% - 2px);
+    padding: 44px;
+    margin-bottom: 28px;
+    background-color: #fff;
+    -webkit-box-shadow: 0 2px 6px rgb(0 0 0 / 20%);
+    -moz-box-shadow: 0 2px 6px rgba(0,0,0,0.2);
+    box-shadow: 0 2px 6pxrgba(0,0,0,0.2);
+    min-width: 320px;
+    min-height: 200px;
+    overflow: hidden;
+}
+
+.form_auth_block_content {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 20px;
+    font-weight: 400;
+    min-height: 200px;
+    
+   
+    
+}
+
+
+
+.form_auth_block label {
+    display: block;
+    text-align: center;
+    padding: 0px;
+    background: #ffffff;
+    opacity: 0.7;
+    font-weight: 600;
+  
+}
+
+.form_auth_block input {
+    display: block;
+    margin: 0 auto;
+    width: 80%;
+    height: 45px;
+    border: none;
+    outline: none;
+}
+
+
+
+input.auth_email{
+    border-bottom: 2px solid #D1D1D4;
+    opacity: 0.8;
+}
+
+input#password{
+    border-bottom: 2px solid #D1D1D4;
+    opacity: 0.8;
+}
+
+input:focus {
+    border-bottom: 2px solid #6A679E;
+}
+
+
+.form_auth_button {
+    color: #fff;
+    background: linear-gradient(45deg,#94a2b2, #5b659ede);
+    font-family: 'Montserrat', sans-serif;
+    font-size: 20px;
+    font-weight: 400;
+    display: block;
+    width: 80%;
+    margin: 0 auto;
+    margin-top: 10px;
+    border-radius: 10px;
+    height: 35px;
+    border: none;
+    cursor: pointer;
+}
+.form_auth_button:hover{
+    background: linear-gradient(45deg,#94a2b2, #6A679E);
+    box-shadow: 14px, #333;
+	outline: 1px solid #6A679E;
+
+}
+/*подвал*/
+.footer{
+    padding: 3px; /* Поля вокруг текста */
+    background: lightgray;
+    opacity: 0.8;
+    position: fixed; /* Фиксированное положение */
+    left: 0; bottom: 0; /* Левый нижний угол */
+    color: #000; /* Цвет текста */
+    width: 100%
+}
+
+
+/* Изменение placeholder для всех браузеров.*/
+
+/* WebKit, Edge */
+::-webkit-input-placeholder {
+    color: #95a3b3;
+    font-weight: 400;
+   }
+   
+   /* Firefox 4-18 */
+   :-moz-placeholder { 
+    color: #95a3b3;
+    opacity: 1;
+   }
+   
+   /* Firefox 19+ */
+   ::-moz-placeholder { 
+    color: #95a3b3;
+    opacity: 1;
+   }
+   
+   /* IE 10-11 */
+   :-ms-input-placeholder { 
+    color: #95a3b3;
+   }
+   
+   /* Edge */
+   ::-ms-input-placeholder { 
+    color: #95a3b3;
+   }
+   
+   /* MODERN BROWSER */
+   ::placeholder { 
+    color: #95a3b3;
+   }
