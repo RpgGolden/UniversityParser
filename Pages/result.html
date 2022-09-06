@@ -44,8 +44,43 @@
           </tbody>
           </table>
         </div>
-    
-
-
     </body>
+<script>
+  async function requestData() {
+    const currentPageSearchParams = new URLSearchParams(window.location.search)
+
+    const snils = currentPageSearchParams.get('snils');
+
+    if (!snils) {
+      alert('No snils defined');
+
+      window.location.assign('/snilsSearch');
+
+      return;
+    }
+
+    const protocol = window.location.protocol;
+    const host = window.location.host;
+    const baseUrl = `${protocol}//${host}`;
+
+    const requestUrl = new URL(`${baseUrl}/getResult`);
+
+    requestUrl.searchParams.append('snils', snils)
+
+    const response = await fetch(requestUrl);
+
+    if (response.status !== 200) {
+      alert('Backend is dead');
+      return;
+    }
+
+    const resultJson = await response.json()
+
+    // there is!
+    console.log(resultJson)
+
+  }
+  requestData();
+  </script>
+    
     </html>

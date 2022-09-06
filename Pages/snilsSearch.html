@@ -1,54 +1,51 @@
 <!DOCTYPE html>
 <html>
-    
+
 <head>
     <meta charset="utf-8">
     <link rel="stylesheet" type="text/css" href="first.css">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="preconnect" href="https://fonts.googleapis.com/%22%3E
+    <link rel="preconnect" href="https://fonts.gstatic.com/" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap" rel="stylesheet">
-<title>
-    shadow keep
-</title>
+    <title>
+        Парсер студентов
+    </title>
 </head>
 
-
 <body>
-
-    
     <div class="page">
         <div class="container">
-        
-                <div class="text">
-                    <img src="assets/logo.png" alt=""> <p> Веб-сервис, предназначенный для мониторинга солгасий о зачислений.</p>
-                </div>
-            
+
+            <div class="text">
+                <img src= "assets/logo.png" alt="">
+                <p> Веб-сервис, предназначенный для мониторинга солгасий о зачислений.</p>
+            </div>
+
             <div class="screen">
-                <div class="screen__content">
-                    <form class="login">
-                        <div class="login__field">
-                            <input type="text" class="login__input" placeholder="СНИЛС">
-                            <button onclick="test_assign()" class="button login__submit">
-                                <span>Найти</span>
-                        </div>	
-                        
-                        </button>
+                <div class="screencontent">
+                    <form class="login" action="result" method = "GET">
+                        <div class="loginfield">
+                            <input type="text" class="logininput" placeholder = "СНИЛС" name="snils" id = "snils">
+                            <button type="submit" class="button loginsubmit"> Найти </button>
+                        </div>
                     </form>
-                    
-                    
                 </div>
             </div>
         </div>
 
-            
-            
+
     </div>
 
-    <script>
-        function test_assign() {
-          document.location.assign("./second_page.html", "_self");
-        }
-      </script>
+    <script src="https://cdn.jsdelivr.net/npm/jquery@3.2.1/dist/jquery.min.js" type="text/javascript"></script>
+    <script src="https://cdn.jsdelivr.net/npm/jquery.maskedinput@1.4.1/src/jquery.maskedinput.min.js" type="text/javascript"></script>
+
+<script>
+$('#snils').mask('999-999-999 99').on('click', function () {
+    if ($(this).val() === '--_ ') {
+        $(this).get(0).setSelectionRange(0, 0);
+    }
+});
+</script>
 
 </body>
 
