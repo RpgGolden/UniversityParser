@@ -13,7 +13,7 @@ const parsers = require(__dirname + '/Parser/parser.js');
         host: "localhost",
         user: "root",
         database: "userid",
-        password: "mikimoki198"
+        password: "TAGANROG"
     });
 
     var app = express();
@@ -23,7 +23,7 @@ const parsers = require(__dirname + '/Parser/parser.js');
     app.use(express.static(__dirname + '/Pages', { extensions: ['html'] }));
 
     app.use(session({
-        secret: 'secret',
+        secret: 'asghhga%123sa@dakbndAsd',
         resave: true,
         saveUninitialized: true
     }));
@@ -42,12 +42,12 @@ const parsers = require(__dirname + '/Parser/parser.js');
             try {
                 const results = await connection.query('SELECT * FROM users WHERE mail = ? AND pass = ?', [email, password]);
 
-                if (results.length > 0) {
+                if (results.length[0] > 0) {
                     req.session.loggedin = true;
                     req.session.email = email;
                     res.redirect('/snilsSearch');
                 }
-                else res.send('<script>alert("Неверные почта и/или пароль"); window.location.href = "/"</script>'); //сломал, починить
+                else res.send('<script>alert("Неверные почта и/или пароль"); window.location.href = "/"</script>');
 
                 res.end();
             } catch (err) {
