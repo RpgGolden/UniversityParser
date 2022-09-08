@@ -1,5 +1,5 @@
 body{
-    background: url("   ");;
+    background: url("assets/background_darker.jpg");;
 }
 
 
@@ -39,6 +39,8 @@ body{
 
 
 .form_auth_block {
+    border-radius: 20px;
+    border-top-right-radius: 0px;
     margin-left: auto;
     margin-right: auto;
     position: calc(100%+10px);
@@ -126,12 +128,13 @@ input:focus {
 }
 /*подвал*/
 .footer{
+    font-family: 'Montserrat', sans-serif;
     padding: 3px; /* Поля вокруг текста */
-    background: lightgray;
+    background: #617286;
     opacity: 0.8;
     position: fixed; /* Фиксированное положение */
     left: 0; bottom: 0; /* Левый нижний угол */
-    color: #000; /* Цвет текста */
+    color: #fff; /* Цвет текста */
     width: 100%
 }
 
