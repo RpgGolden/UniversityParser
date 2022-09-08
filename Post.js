@@ -13,7 +13,7 @@ const parsers = require(__dirname + '/Parser/parser.js');
         host: "localhost",
         user: "root",
         database: "userid",
-        password: "mikimoki198"
+        password: "7623dfgh"
     });
 
     var app = express();
