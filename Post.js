@@ -42,7 +42,7 @@ const parsers = require(__dirname + '/Parser/parser.js');
             try {
                 const results = await connection.query('SELECT * FROM users WHERE mail = ? AND pass = ?', [email, password]);
 
-                if (results.length[0] > 0) {
+                if (results[0].length > 0) {
                     req.session.loggedin = true;
                     req.session.email = email;
                     res.redirect('/snilsSearch');
