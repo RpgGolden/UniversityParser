@@ -5,6 +5,7 @@ var bodyParser = require('body-parser');
 const urlencodedParser = express.urlencoded({ extended: false });
 const session = require('express-session');
 const parsers = require(__dirname + '/Parser/parser.js');
+require('dotenv').config();
 
 (async () => {
     // MySQL DataBase with users
@@ -13,7 +14,7 @@ const parsers = require(__dirname + '/Parser/parser.js');
         host: "localhost",
         user: "root",
         database: "userid",
-        password: "TAGANROG"
+        password: process.env.DATABASE_PASSWORD
     });
 
     var app = express();
