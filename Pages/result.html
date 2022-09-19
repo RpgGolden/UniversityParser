@@ -20,39 +20,89 @@
           <tr class = "name">
             <th colspan="4" id = "nick">
               <div class = "head">
-    <h4>Владимиров Владимир Владимирович</h4>
-    <h5>166-752-099-00</h5>
+    
+    <h4 id="snils"> CНИЛС <h5 id="snils_min"></h5></h4>
   </div>
     </th>
     </tr>
     </thead>
 
-    <tbody>
+    <tbody id="myTable">
       <tr class="first">
         <th class="line1">№</th>
         <th>Название университета</th>
         <th>Направление</th>
         <th>Форма обучения</th>
-        <th class="line2">Согласие на зачисление</th>
-        </tr>
+        <th class="line2">Согласие на зачисление</th> </tr>
         <div class ="content">
-        <tr class="second">
-          <td class="line1">1</td>
-          <td  rowspan="4">ЮФУ</td>
-          <td  rowspan="4">09.03.02 Информационные системы и технологии</td>
-          <td rowspan="4">Очная</td>
-          <td class="line2"></td>
-          </tr>
+        <tr class="second"> </tr>
         </div>
           </tbody>
           </table>
         </div>
     </body>
 <script>
+  requestData();
+ // примерный json, сюда нужно будет присвоить распарсенный json
+   
+  
+	
+	// вызов функции построения таблицы
+  
+ 
+	 async function buildTable(data){   // функция построения таблицы
+		var table = await document.getElementById('myTable')
+
+    
+		for (var i = 0; i < data.length; i++){
+      if(data[i].agreement==false){
+        data[i].agreement = 'X'
+      }
+      else {
+        data[i].agreement = '✓'
+      }
+			var row = `<tr>
+              <td>${i+1}</td>
+							<td>${data[i].univ}</td>
+							<td>${data[i].typeofStudy}</td>
+							<td>${data[i].studyDir}</td>
+              <td>${data[i].agreement}</td>
+
+					  </tr>`
+			table.innerHTML += row
+
+
+		}
+	}
+
+var test = getURLVar('snils'); // вызов функции получения СНИЛС из строки поиска
+document.getElementById("snils_min").innerHTML = test; // вставка в html
+
+ 
+ function getURLVar(key) { // функция получения СНИЛС из строки поиска
+  var query = String(document.location.href).split('?');
+  if (query[1]) {
+    var part = query[1].split('&');
+    for (i = 0; i < part.length; i++) {
+      var data = part[i].split('=');
+      if (data[0] == key && data[1]){
+        return data[1].replace('+',' ')
+      } 
+      
+    }
+  }
+  return '';
+}
+
+
+
+
+
   async function requestData() {
     const currentPageSearchParams = new URLSearchParams(window.location.search)
 
     const snils = currentPageSearchParams.get('snils');
+    
 
     if (!snils) {
       alert('No snils defined');
@@ -78,12 +128,13 @@
     }
 
     const resultJson = await response.json()
+     await buildTable(resultJson)
 
-    // there is!
-    console.log(resultJson)
+    
+   
 
   }
-  requestData();
+  
   </script>
     
     </html>
