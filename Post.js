@@ -99,6 +99,7 @@ require('dotenv').config();
 
         // send result
         res.json(result);
+        console.log(result);
     });
 
     // start the server
