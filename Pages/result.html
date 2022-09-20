@@ -9,6 +9,10 @@
   </head>
 
   <body>
+    <div class="preloader">
+      <div class="preloader__image"></div>
+    </div>
+    </div>
     <a onclick="javascript:history.back();return false;">
       <img src="assets/back-roll.png" alt="Картинка"/>
  </a>
@@ -40,8 +44,22 @@
           </tbody>
           </table>
         </div>
+
+        <script>
+          if(row) {
+            document.body.classList.add('loaded_hiding');
+            window.setTimeout(function () {
+              document.body.classList.add('loaded');
+              document.body.classList.remove('loaded_hiding');
+            }, 500);
+          }
+        </script>
     </body>
+
+    
+
 <script>
+  
   requestData();
  // примерный json, сюда нужно будет присвоить распарсенный json
    
@@ -70,6 +88,13 @@
 
 					  </tr>`
 			table.innerHTML += row
+       
+            document.body.classList.add('loaded_hiding');
+            window.setTimeout(function () {
+              document.body.classList.add('loaded');
+              document.body.classList.remove('loaded_hiding');
+            }, 500);
+          
 
 
 		}
@@ -130,7 +155,7 @@ document.getElementById("snils_min").innerHTML = test; // вставка в html
     const resultJson = await response.json()
      await buildTable(resultJson)
 
-    
+  
    
 
   }
