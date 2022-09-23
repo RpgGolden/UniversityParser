@@ -49,7 +49,7 @@ module.exports = {
         }
     },
 
-    UNECON: parseUnecon = async (searchedSNILS) => {
+    UNECON1: parseUnecon = async (searchedSNILS) => {
         const url = `https://priem.unecon.ru/stat/stat_konkurs.php?y=2021&filial_kod=1&zayav_type_kod=1&obr_konkurs_kod=0&recomend_type=null&rec_status_kod=all&ob_forma_kod=1&ob_osnova_kod=1&konkurs_grp_kod=3754&prior=all&status_kod=all&is_orig_doc=all&has_agreement=all&dogovor=all&show=%D0%9F%D0%BE%D0%BA%D0%B0%D0%B7%D0%B0%D1%82%D1%8C`;
 
         try {
