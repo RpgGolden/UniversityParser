@@ -23,7 +23,7 @@ require('dotenv').config();
 
     app.use(bodyParser.urlencoded({ extended: false }));
     app.use(express.json());
-    app.use(express.static(__dirname + '/Pages', { extensions: ['html'] }));
+    app.use(express.static(__dirname + '/Static'));
 
     app.use(session({
         secret: 'asghhga%123sa@dakbndAsd',
@@ -34,7 +34,21 @@ require('dotenv').config();
     var port = 9000;
 
     app.get('/', (req, res) => {
-        res.sendFile(__dirname + '/Pages/auth.html')
+
+        if (req.session.loggedin) res.redirect('/snilsSearch');
+        else res.sendFile(__dirname + '/Templates/auth.html')
+    })
+
+    app.get('/snilsSearch', (req,res)=> {
+        if (!req.session.loggedin) return res.redirect('/')
+        
+        res.sendFile(__dirname + '/Templates/snilsSearch.html')
+    })
+
+    app.get('/result', (req,res)=> {
+        if (!req.session.loggedin) return res.redirect('/')
+        
+        res.sendFile(__dirname + '/Templates/result.html')
     })
 
     app.post('/', async function (req, res) {
@@ -61,10 +75,12 @@ require('dotenv').config();
             res.send('<script>alert("Пожалуйста, введите почту и пароль"); window.location.href = "/"</script>');
             res.end()
         }
-
+        
     })
 
     app.get('/getResult', async function (req, res) {
+
+        if (!req.session.loggedin) return res.sendStatus(401);
 
         // receive parameters
         const snils = (req.query['snils'] || '').toString().trim();
