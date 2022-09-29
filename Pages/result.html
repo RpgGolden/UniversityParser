@@ -73,18 +73,19 @@
 
     
 		for (var i = 0; i < data.length; i++){
-      if(data[i].agreement==false){
-        data[i].agreement = 'X'
+      for (var j = 0; j < data[i].length; j++){
+      if(data[i][j].agreement==false){
+        data[i][j].agreement = 'X'
       }
       else {
-        data[i].agreement = '✓'
+        data[i][j].agreement = '✓'
       }
 			var row = `<tr>
-              <td>${i+1}</td>
-							<td>${data[i].univ}</td>
-							<td>${data[i].typeofStudy}</td>
-							<td>${data[i].studyDir}</td>
-              <td>${data[i].agreement}</td>
+              <td>${i + j + 1}</td>
+							<td>${data[i][j].univ}</td>
+							<td>${data[i][j].typeofStudy}</td>
+							<td>${data[i][j].studyDir}</td>
+              <td>${data[i][j].agreement}</td>
 
 					  </tr>`
 			table.innerHTML += row
@@ -94,34 +95,11 @@
               document.body.classList.add('loaded');
               document.body.classList.remove('loaded_hiding');
             }, 500);
-          
-
-
-		}
+          }
+    		}
 	}
 
-var test = getURLVar('snils'); // вызов функции получения СНИЛС из строки поиска
-document.getElementById("snils_min").innerHTML = test; // вставка в html
-
- 
- function getURLVar(key) { // функция получения СНИЛС из строки поиска
-  var query = String(document.location.href).split('?');
-  if (query[1]) {
-    var part = query[1].split('&');
-    for (i = 0; i < part.length; i++) {
-      var data = part[i].split('=');
-      if (data[0] == key && data[1]){
-        return data[1].replace('+',' ')
-      } 
-      
-    }
-  }
-  return '';
-}
-
-
-
-
+document.getElementById("snils_min").innerHTML = new URLSearchParams(window.location.search).get('snils');
 
   async function requestData() {
     const currentPageSearchParams = new URLSearchParams(window.location.search)
@@ -153,6 +131,7 @@ document.getElementById("snils_min").innerHTML = test; // вставка в html
     }
 
     const resultJson = await response.json()
+    console.log(resultJson)
      await buildTable(resultJson)
 
   

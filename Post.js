@@ -4,6 +4,8 @@ const mysql = require("mysql2/promise");
 var bodyParser = require('body-parser');
 const urlencodedParser = express.urlencoded({ extended: false });
 const session = require('express-session');
+const { UNECON, SFEDU } = require('./Parser/parser');
+const parser = require('./Parser/parser');
 const parsers = require(__dirname + '/Parser/parser.js');
 require('dotenv').config();
 
@@ -86,15 +88,13 @@ require('dotenv').config();
         }
 
         //TODO: Одна ошибка кидает ошибки на всё, обсудить/Обработать.
-        const promises = [];
+        var promises = [];
         for (const key of Object.keys(parsers)) {
             promises.push(
                 parsers[key](snils)
             );
         }
-
         const result = await Promise.all(promises);
-
         // preparing results
 
         // send result
