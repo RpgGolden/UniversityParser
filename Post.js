@@ -9,6 +9,8 @@ const parser = require('./Parser/parser');
 const parsers = require(__dirname + '/Parser/parser.js');
 require('dotenv').config();
 
+var port = 9001;
+
 (async () => {
     // MySQL DataBase with users
     const connection = await mysql.createConnection({
@@ -30,8 +32,6 @@ require('dotenv').config();
         resave: true,
         saveUninitialized: true
     }));
-
-    var port = 9000;
 
     app.get('/', (req, res) => {
 
@@ -106,15 +106,14 @@ require('dotenv').config();
         //TODO: Одна ошибка кидает ошибки на всё, обсудить/Обработать.
         var promises = [];
         for (const key of Object.keys(parsers)) {
-            promises.push(
-                parsers[key](snils)
-            );
+            let ArrObj = parsers[key](snils)
+            promises.push(ArrObj);
         }
-        const result = await Promise.all(promises);
+        const result = await Promise.all(promises)
         // preparing results
 
         // send result
-        res.json(result);
+        res.json(result.filter(arr => arr.length !== 0));
     });
 
     // start the server

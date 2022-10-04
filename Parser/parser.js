@@ -49,7 +49,6 @@ module.exports = {
                     }
                 }
                 // if no rows with SNILS found - return empty result
-                if (!foundRow) res.push(null);
             } catch (e) {
                 console.error("Unable to parse unecon.ru", e)
             }
@@ -102,7 +101,6 @@ module.exports = {
                     }
                 }
                 // if no rows with SNILS found - return empty result
-                if (!foundRow) res.push(null);
             } catch (e) {
                 console.error("Unable to parse sfedu.ru", e)
             }
