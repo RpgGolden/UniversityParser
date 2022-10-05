@@ -40,7 +40,7 @@ img {
 }
 
 html {
-    background-image: url(assets/background.jpg);
+    background-image: url(assets/background_darker.jpg);
     background-repeat: no-repeat;
     background-position: center center;
     background-attachment: fixed;
