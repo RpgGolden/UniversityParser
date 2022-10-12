@@ -1,6 +1,14 @@
+
 html {
-  background-image: url(assets/background_darker.jpg);
+  background-image: url("assets/background_new.png");
   /*border: 2px solid red;*/
+  background-repeat: no-repeat;
+  background-position: center center;
+  background-attachment: fixed;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
   height: 100%;
 }
 
@@ -18,9 +26,15 @@ table {
   /*border: 3px solid black;*/
   width: 90%;
   height: 100%;
-  background: #A5B3BE;
+  /*background: #b1bacb;*/
+  background: #c8d5ef;
+  box-shadow: 0.4em 0.4em 5px rgba(65, 85, 128, 0.5);
   border-radius: 15px 0px 15px 15px;
   border-spacing: 0;
+  border-collapse: collapse;
+  border-style: hidden;
+ 
+  
 }
 
 .preloader {
@@ -30,7 +44,7 @@ table {
   right: 0;
   bottom: 0;
   overflow: hidden;
-  background: #fcfefc;
+  background: #fff;
   z-index: 1001;
 }
 
@@ -83,9 +97,9 @@ table {
 
 #nick {
   border: 1px solid;
-  border-radius: 10px 0px 10px 0px;
-  box-shadow: 0.4em 0.4em 5px rgba(122,122,122,0.5);
-  background: linear-gradient(to left, #404362, #96A2B2);
+  border-radius: 0px 0px 0px 0px;
+  box-shadow: 0.4em 0.4em 5px rgba(65, 85, 128, 0.5);
+  background: linear-gradient(to left, #5b659ede,#AACFEE);
   height: 129px;
   border: none;
 }
@@ -116,25 +130,70 @@ thead {
   
 }
 
+
 tbody {
+  font-weight: lighter;
+  font-size: 18px;
   color:black;
   padding-top: 30px;
 }
 
 th,
 td {
-    border-top: 1px solid white;
+    border: 1px solid white;
+    
     
 }
 
 td {
   border-bottom: none;
   vertical-align: top;
+  padding-top:20px;
 }
 
 .line1 {
   border-left: none;
 }
 
+h2,h3{
+  margin-left:auto;
+  margin-right: auto;
+   /*text-align:left;*/
+   font-size:larger;
+   font-weight:400;
+}
 
+.button 
+{
+  border-left: 1px solid white;
+  border-radius: 10px 0px 0px 0px;
+  box-shadow: 0.4em 0.4em 5px rgba(122,122,122,0.5);
+  background:#AACFEE;
+  border: none;
+}
 
+.footer{
+  font-family: 'Montserrat', sans-serif;
+  padding: 3px; /* Поля вокруг текста */
+  background: #656696;
+  opacity: 0.8;
+  position: fixed; /* Фиксированное положение */
+  left: 0; bottom: 0; /* Левый нижний угол */
+  color: #fff; /* Цвет текста */
+  width: 100%
+}
+
+/*.footer_logo {
+  display: flex;
+  width: 50px;
+  margin-left: 96%;
+  margin-top: 190px;
+  flex-direction: row;
+  flex-wrap: nowrap;
+  align-items: center;
+
+}
+
+.footer_logo img {
+  width: 100%;
+}*/
