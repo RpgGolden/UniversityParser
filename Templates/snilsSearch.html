@@ -4,7 +4,7 @@
 <head>
     <meta charset="utf-8">
     <link rel="stylesheet" type="text/css" href="snilsSearch.css">
-    <link rel="preconnect" href="https://fonts.googleapis.com/%22%3E">
+    <link rel="preconnect" href="https://fonts.googleapis.com/%22%3E
     <link rel="preconnect" href="https://fonts.gstatic.com/" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap" rel="stylesheet">
     <title>
@@ -13,28 +13,30 @@
 </head>
 
 <body>
-    <div class="button2"><a href="#" onclick="history.back();return false;"><img src="assets/p.png"/></a>
-        <div class="text">
-            <img class="logo" src= "assets/logo3.png" alt="">
-            <p> Веб-сервис, предназначенный для мониторинга солгасий о зачислений.</p>
-        </div>
-        <div class="page">
-            <div class="container">
-    
-                <div class="screen">
-                    <div class="screencontent">
-                        <form class="login" action="result" method = "GET">
-                            <div class="loginfield">
-                                <input type="text" class="logininput" placeholder = "СНИЛС" name="snils" id = "snils">
-                                <button type="submit" class="button login__submit"> Найти </button>
-                            </div>
-                        </form>
-                    </div>
+   
+   
+    <div class="page">
+        <div class="container">
+            <div class="text">
+                <img class="logo" src= "assets/logo3.png" alt="">
+                <p> Веб-сервис, предназначенный для мониторинга солгасий о зачислений.</p>
+            </div>
+            <div class="screen">
+                <div class="screencontent">
+                    <form class="login" action="result" method = "GET">
+                        <div class="loginfield">
+                            <input type="text" class="logininput" placeholder = "СНИЛС" name="snils" id = "snils">
+                            <button type="submit" class="button login__submit"> Найти </button>
+                        </div>
+                    </form>
                 </div>
             </div>
-    
-    
         </div>
+
+
+    </div>
+    
+
     <script src="https://cdn.jsdelivr.net/npm/jquery@3.2.1/dist/jquery.min.js" type="text/javascript"></script>
     <script src="https://cdn.jsdelivr.net/npm/jquery.maskedinput@1.4.1/src/jquery.maskedinput.min.js" type="text/javascript"></script>
 
@@ -45,12 +47,6 @@ $('#snils').mask('999-999-999 99').on('click', function () {
     }
 });
 </script>
-
-<div class="footer_logo">
-    <a href="https://ictis.sfedu.ru" target="_blank">
-        <img id="ictis" src="assets/logo_ictis.png">
-    </a>
-</div>
 
 <div class="footer">
     &copy; Shadow Keep 2022

@@ -5,20 +5,8 @@ body {
     width: 100%;
 }
 
-  
+
 /*Текст и фон */
-
-p {
-    margin:0;
-    top: auto;
-    left: 23%;
-    width: calc(30% - 100px);
-    position: fixed;
-    font-size: 26px;
-    font-weight: 400;
-    /*color: #61628F;*/
-
-}
 
 .page {
     font-size: 26px;
@@ -36,18 +24,20 @@ p {
     height: 200px;
     position:absolute;
     line-height: normal;
-    width: 40%;
+    width:50px;
+    font-size: 26px;
+    font-weight: 400;
     display: flex;
-    margin-top: 200px;
-    margin-left: 150px;
+    margin-left: 300px;
 }
 
 .logo {
     width: 100px;
     position: fixed;
     display: flex;
-    top: 29%;
-    left: 10%;
+    
+    margin-top: 60px;
+    left: 150px;
     opacity: 0.9;
     
 }
@@ -72,7 +62,6 @@ html {
     height: 50%;
     margin: 0 auto;
     width: 100%;
-    
 }
 
 .screen {
@@ -86,7 +75,6 @@ html {
     position: relative;
     top: 9%;
     left: 70%;
-    
 }
 
 .screen__content {
@@ -100,14 +88,12 @@ html {
     padding-left: 15%;
     padding-top: 8%;
     padding-bottom: 0%;
-
 }
 
 .login__field {
     margin-top: 0px;
     position: relative;
     top: -70px;
-    
 }
 
 .logininput {
@@ -165,21 +151,6 @@ html {
     top:10%;
     left:50%;
     background:#96a2b200;
-}
-
-.footer_logo {
-    display: flex;
-    width: 50px;
-    margin-left: 96%;
-    margin-top: 710px;
-    flex-direction: row;
-    flex-wrap: nowrap;
-    align-items: center;
-
-}
-
-.footer_logo img {
-    width: 100%;
 }
 
 .footer{
