@@ -138,6 +138,12 @@
     console.log(resultJson)
     await buildTable(resultJson)
 
+    if (resultJson.length == 0) {
+      alert('No data for this snils');
+      window.location.assign('/snilsSearch');
+      return;
+    }
+
   }
 
 </script>
