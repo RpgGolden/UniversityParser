@@ -1,0 +1,180 @@
+html {
+  background-image: url(assets/background.jpg);
+  /*border: 2px solid red;*/
+  height: 100%;
+}
+
+body {
+  font-family: 'Montserrat', sans-serif;
+  color: #fff;
+  height: 80%;
+  width: 100%;
+  /*border:  2px solid red;*/
+}
+
+table {
+  text-align: center;
+  margin: 20px auto;
+  /*border: 3px solid black;*/
+  width: 80%;
+  height: 100%;
+  /*background: #b1bacb;*/
+  background: #c1c9d8;
+  box-shadow: 0.4em 0.4em 5px rgba(122,122,122,0.5);
+  border-radius: 15px 0px 15px 15px;
+  border-spacing: 0;
+  border-collapse: collapse;
+  border-style: hidden;
+ 
+  
+}
+
+.preloader {
+  position: fixed;
+  left: 0;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  overflow: hidden;
+  background: #fff;
+  z-index: 1001;
+}
+
+.preloader__image {
+  position: relative;
+  top: 50%;
+  left: 50%;
+  width: 128px;
+  height: 128px;
+  margin-top: -32px;
+  margin-left: -32px;
+  background: url(assets/cockroach-spin.gif) repeat 50% 50%; /*расположение (url) изображения gif и др. параметры*/
+}
+
+.loaded_hiding .preloader {
+  transition: 0.3s opacity;
+  opacity: 0;
+}
+
+.loaded .preloader {
+  display: none;
+}
+
+@keyframes preloader-rotate {
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+@keyframes preloader-bounce {
+
+  0%,
+  100% {
+    transform: scale(0);
+  }
+
+  50% {
+    transform: scale(1);
+  }
+}
+
+.loaded_hiding .preloader {
+  transition: 0.3s opacity;
+  opacity: 0;
+}
+
+.loaded .preloader {
+  display: none;
+}
+
+#nick {
+  border: 1px solid;
+  border-radius: 0px 0px 0px 0px;
+  box-shadow: 0.4em 0.4em 5px rgba(122,122,122,0.5);
+  background: linear-gradient(to left, #404362, #96A2B2);
+  height: 129px;
+  border: none;
+}
+
+
+.container {
+  margin: 1px 2px 1px 2px;
+  /*border: 3px solid yellow;*/
+  height: 80%;
+  display: flex;
+}
+
+.head {
+  padding-left: 190px;
+  width: 450px;
+  height: 55px;
+  line-height: 0.9;
+}
+
+thead {
+  height: 130px;
+  font-size: 20px;
+  font-weight: lighter;
+}
+
+.first {
+  height: 80px;
+  
+}
+
+
+tbody {
+  font-weight: lighter;
+  color:black;
+  padding-top: 30px;
+}
+
+th,
+td {
+    border: 1px solid white;
+    
+    
+}
+
+td {
+  border-bottom: none;
+  vertical-align: top;
+  padding-top:20px;
+}
+
+.line1 {
+  border-left: none;
+}
+
+h2,h3{
+  font-family: 'Montserrat', sans-serif;
+  font-size: 25px;
+  font-weight: 400;
+  line-height: 20px;
+  margin-left:auto;
+  margin-right: auto;
+  /*text-align:left;*/
+  font-size:larger;
+  font-weight:400;
+}
+
+.button 
+{
+  border-left: 1px solid white;
+  border-radius: 10px 0px 0px 0px;
+  box-shadow: 0.4em 0.4em 5px rgba(122,122,122,0.5);
+  background:#96a2b2;
+  border: none;
+}
+
+.footer{
+  font-family: 'Montserrat', sans-serif;
+  padding: 3px; /* Поля вокруг текста */
+  background: #617286;
+  opacity: 0.8;
+  position: fixed; /* Фиксированное положение */
+  left: 0; bottom: 0; /* Левый нижний угол */
+  color: #fff; /* Цвет текста */
+  width: 100%
+}
+
