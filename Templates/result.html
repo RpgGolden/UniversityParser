@@ -6,6 +6,9 @@
      <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap" rel="stylesheet">
     <link href='result.css' rel='stylesheet' type='text/css'/>
     <link href="https://fonts.googleapis.com/css?family=Oswald" rel="stylesheet">
+    <title>
+      Таблица абитуриентов
+    </title>
   </head>
 
   <body>
@@ -35,8 +38,8 @@
       <tr class="first">
         <th class="line1">№</th>
         <th>Название университета</th>
-        <th>Направление</th>
         <th>Форма обучения</th>
+        <th>Направление</th>
         <th class="line2">Согласие на зачисление</th> </tr>
         <div class ="content">
         <tr class="second"> </tr>
@@ -134,6 +137,12 @@
     const resultJson = await response.json()
     console.log(resultJson)
     await buildTable(resultJson)
+
+    if (resultJson.length == 0) {
+      alert('No data for this snils');
+      window.location.assign('/snilsSearch');
+      return;
+    }
 
   }
 
