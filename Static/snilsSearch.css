@@ -8,8 +8,6 @@ body {
 
 /*Текст и фон */
 
-<<<<<<< Updated upstream:Static/snilsSearch.css
-=======
 p {
     font-family: 'Montserrat', sans-serif;
     font-size: 25px;
@@ -25,7 +23,6 @@ p {
     color:#5A5582;
 }
 
->>>>>>> Stashed changes:Pages/snilsSearch.css
 .page {
     font-size: 26px;
     font-weight: 400;
@@ -46,28 +43,16 @@ p {
     font-size: 26px;
     font-weight: 400;
     display: flex;
-<<<<<<< Updated upstream:Static/snilsSearch.css
-    margin-left: 300px;
-=======
     margin-top: 290px;
     margin-left: 150px;
->>>>>>> Stashed changes:Pages/snilsSearch.css
 }
 
 .logo {
     width: 100px;
     position: fixed;
     display: flex;
-<<<<<<< Updated upstream:Static/snilsSearch.css
-    
-    margin-top: 60px;
-    left: 150px;
-    opacity: 0.9;
-    
-=======
     top: 40%;
     left: 10%;
->>>>>>> Stashed changes:Pages/snilsSearch.css
 }
 
 html {
@@ -101,11 +86,7 @@ html {
     width: 450px;
     box-shadow: 3px 3px 3px rgba(67, 67, 102, 0.5);
     position: relative;
-<<<<<<< Updated upstream:Static/snilsSearch.css
-    top: 9%;
-=======
     top: 30%;
->>>>>>> Stashed changes:Pages/snilsSearch.css
     left: 70%;
 }
 
@@ -188,23 +169,13 @@ html {
 .footer{
     font-family: 'Montserrat', sans-serif;
     padding: 3px; /* Поля вокруг текста */
-<<<<<<< Updated upstream:Static/snilsSearch.css
-    background: #656696;
-=======
     background: #617286;
->>>>>>> Stashed changes:Pages/snilsSearch.css
     opacity: 0.8;
     position: fixed; /* Фиксированное положение */
     left: 0; bottom: 0; /* Левый нижний угол */
     color: #fff; /* Цвет текста */
-<<<<<<< Updated upstream:Static/snilsSearch.css
-    width: 100%
-}
-
-=======
     width: 100%;
 }
->>>>>>> Stashed changes:Pages/snilsSearch.css
 /* Изменение placeholder для всех браузеров.*/
 
 

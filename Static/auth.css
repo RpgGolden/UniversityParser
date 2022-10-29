@@ -1,10 +1,6 @@
 body{
-<<<<<<< Updated upstream:Static/auth.css
     background: url("assets/background_new.png") ;
 
-=======
-    background: url("assets/background.jpg");
->>>>>>> Stashed changes:Pages/auth.css
     background-repeat: no-repeat;
     background-position: center center;
     background-attachment: fixed;
@@ -37,13 +33,9 @@ body{
     font-size: 25px;
     font-weight: 400;
     line-height: 40px;
-<<<<<<< Updated upstream:Static/auth.css
     color: rgb(58 63 98);
  }
-=======
-    color: rgb(22, 23, 29);
-    opacity: 0.8;
->>>>>>> Stashed changes:Pages/auth.css
+
 
 @media (max-width: 480px) {
     .title {
@@ -145,10 +137,7 @@ input:focus {
 .form_auth_button:hover{
     background: linear-gradient(45deg,#94a2b2, #6A679E);
     box-shadow: 14px, #333;
-<<<<<<< Updated upstream:Static/auth.css
 	
-=======
->>>>>>> Stashed changes:Pages/auth.css
 
 }
 
