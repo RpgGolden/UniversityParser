@@ -36,7 +36,6 @@ body{
     color: rgb(58 63 98);
  }
 
-
 @media (max-width: 480px) {
     .title {
         font-size: 0px;
@@ -75,6 +74,9 @@ body{
     font-size: 20px;
     font-weight: 400;
     min-height: 200px;
+    
+   
+    
 }
 
 
@@ -87,10 +89,6 @@ body{
     opacity: 0.7;
     font-weight: 600;
   
-}
-
-input::placeholder {
-    font-size: 18px;
 }
 
 .form_auth_block input {
