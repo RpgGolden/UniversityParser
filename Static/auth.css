@@ -1,5 +1,14 @@
 body{
-    background: url("assets/background_darker.jpg");;
+    background: url("assets/background_new.png") ;
+
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-attachment: fixed;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+    height: 100%;
 }
 
 
@@ -15,17 +24,18 @@ body{
 }
 .logo{
     float: left;
-    padding-right: 20px;
+    padding-right: 40px;
+    opacity: 0.8;
 }
 .title{
+    margin-top: 60px;
     font-family: 'Montserrat', sans-serif;
-    font-size: 20px;
-    font-weight: 800;
-    line-height: 50px;
-    color: #000;
-    opacity: 0.8;
+    font-size: 25px;
+    font-weight: 400;
+    line-height: 40px;
+    color: rgb(58 63 98);
+ }
 
-}
 @media (max-width: 480px) {
     .title {
         font-size: 0px;
@@ -42,6 +52,7 @@ body{
     border-radius: 20px;
     border-top-right-radius: 0px;
     margin-left: auto;
+    margin-top: 40px;
     margin-right: auto;
     position: calc(100%+10px);
     max-width: 400px;
@@ -51,7 +62,8 @@ body{
     background-color: #fff;
     -webkit-box-shadow: 0 2px 6px rgb(0 0 0 / 20%);
     -moz-box-shadow: 0 2px 6px rgba(0,0,0,0.2);
-    box-shadow: 0 2px 6pxrgba(0,0,0,0.2);
+    
+    box-shadow: 3px 3px 3px  rgba(67, 67, 102, 0.5);
     min-width: 320px;
     min-height: 200px;
     overflow: hidden;
@@ -107,7 +119,7 @@ input:focus {
 
 .form_auth_button {
     color: #fff;
-    background: linear-gradient(45deg,#94a2b2, #5b659ede);
+    background: linear-gradient(45deg,#AACFEE, #5b659ede);
     font-family: 'Montserrat', sans-serif;
     font-size: 20px;
     font-weight: 400;
@@ -123,14 +135,31 @@ input:focus {
 .form_auth_button:hover{
     background: linear-gradient(45deg,#94a2b2, #6A679E);
     box-shadow: 14px, #333;
-	outline: 1px solid #6A679E;
+	
 
 }
+
+.footer_logo {
+    display: flex;
+    width: 50px;
+    margin-left: 97%;
+    margin-top: 210px;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    align-items: center;
+
+}
+
+.footer_logo img {
+    width: 100%;
+}
+
+
 /*подвал*/
 .footer{
     font-family: 'Montserrat', sans-serif;
     padding: 3px; /* Поля вокруг текста */
-    background: #617286;
+    background: #656696;
     opacity: 0.8;
     position: fixed; /* Фиксированное положение */
     left: 0; bottom: 0; /* Левый нижний угол */

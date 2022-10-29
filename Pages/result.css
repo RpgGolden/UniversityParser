@@ -1,14 +1,6 @@
-
 html {
-  background-image: url("assets/background_new.png");
+  background-image: url(assets/background.jpg);
   /*border: 2px solid red;*/
-  background-repeat: no-repeat;
-  background-position: center center;
-  background-attachment: fixed;
-  -webkit-background-size: cover;
-  -moz-background-size: cover;
-  -o-background-size: cover;
-  background-size: cover;
   height: 100%;
 }
 
@@ -24,11 +16,11 @@ table {
   text-align: center;
   margin: 20px auto;
   /*border: 3px solid black;*/
-  width: 90%;
+  width: 80%;
   height: 100%;
   /*background: #b1bacb;*/
-  background: #c8d5ef;
-  box-shadow: 0.4em 0.4em 5px rgba(65, 85, 128, 0.5);
+  background: #c1c9d8;
+  box-shadow: 0.4em 0.4em 5px rgba(122,122,122,0.5);
   border-radius: 15px 0px 15px 15px;
   border-spacing: 0;
   border-collapse: collapse;
@@ -98,8 +90,8 @@ table {
 #nick {
   border: 1px solid;
   border-radius: 0px 0px 0px 0px;
-  box-shadow: 0.4em 0.4em 5px rgba(65, 85, 128, 0.5);
-  background: linear-gradient(to left, #5b659ede,#AACFEE);
+  box-shadow: 0.4em 0.4em 5px rgba(122,122,122,0.5);
+  background: linear-gradient(to left, #404362, #96A2B2);
   height: 129px;
   border: none;
 }
@@ -133,7 +125,6 @@ thead {
 
 tbody {
   font-weight: lighter;
-  font-size: 18px;
   color:black;
   padding-top: 30px;
 }
@@ -156,11 +147,15 @@ td {
 }
 
 h2,h3{
+  font-family: 'Montserrat', sans-serif;
+  font-size: 25px;
+  font-weight: 400;
+  line-height: 20px;
   margin-left:auto;
   margin-right: auto;
-   /*text-align:left;*/
-   font-size:larger;
-   font-weight:400;
+  /*text-align:left;*/
+  font-size:larger;
+  font-weight:400;
 }
 
 .button 
@@ -168,14 +163,14 @@ h2,h3{
   border-left: 1px solid white;
   border-radius: 10px 0px 0px 0px;
   box-shadow: 0.4em 0.4em 5px rgba(122,122,122,0.5);
-  background:#AACFEE;
+  background:#96a2b2;
   border: none;
 }
 
 .footer{
   font-family: 'Montserrat', sans-serif;
   padding: 3px; /* Поля вокруг текста */
-  background: #656696;
+  background: #617286;
   opacity: 0.8;
   position: fixed; /* Фиксированное положение */
   left: 0; bottom: 0; /* Левый нижний угол */
@@ -183,17 +178,3 @@ h2,h3{
   width: 100%
 }
 
-/*.footer_logo {
-  display: flex;
-  width: 50px;
-  margin-left: 96%;
-  margin-top: 190px;
-  flex-direction: row;
-  flex-wrap: nowrap;
-  align-items: center;
-
-}
-
-.footer_logo img {
-  width: 100%;
-}*/

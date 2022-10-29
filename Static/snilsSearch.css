@@ -1,9 +1,6 @@
 body {
     font-family: 'Montserrat', sans-serif;
-    font-size: 26px;
-    font-weight: 400;
-    line-height: 1.6px;
-    color: #fff;
+    color: rgb(38, 42, 61);
     height: 100%;
     width: 100%;
 }
@@ -11,11 +8,10 @@ body {
 
 /*Текст и фон */
 
-p {
-    margin: 0;
-}
-
 .page {
+    font-size: 26px;
+    font-weight: 400;
+    line-height: 1.6px;
     display: flex;
     flex-direction: column;
     height: calc(100% - 200px);
@@ -25,22 +21,29 @@ p {
 }
 
 .text {
-    height: 100px;
-    position: absolute;
+    height: 200px;
+    position:absolute;
     line-height: normal;
-    width: 40%;
+    width:50px;
+    font-size: 26px;
+    font-weight: 400;
     display: flex;
-    margin-top: 200px;
-    margin-left: 150px;
+    margin-left: 300px;
 }
 
-img {
+.logo {
     width: 100px;
-    margin-right: 100px;
+    position: fixed;
+    display: flex;
+    
+    margin-top: 60px;
+    left: 150px;
+    opacity: 0.9;
+    
 }
 
 html {
-    background-image: url(assets/background_darker.jpg);
+    background-image: url("assets/background_new.png");
     background-repeat: no-repeat;
     background-position: center center;
     background-attachment: fixed;
@@ -68,9 +71,9 @@ html {
     position: top;
     height: 150px;
     width: 450px;
-    box-shadow: 0px 0px px #333;
+    box-shadow: 3px 3px 3px rgba(67, 67, 102, 0.5);
     position: relative;
-    top: 50%;
+    top: 9%;
     left: 70%;
 }
 
@@ -99,7 +102,7 @@ html {
     font-weight: 100%;
     font-size: 20px;
     text-transform: uppercase;
-    color: #95a3b3;
+    color: #585b9b;
     border-bottom: 2px solid #D1D1D4;
     background: none;
     margin-top: 5px;
@@ -107,6 +110,10 @@ html {
     font-weight: 700;
     width: 75%;
     transition: .2s;
+    outline: 0;
+    outline-offset: 0;
+    font-family: 'Montserrat', sans-serif;
+    
 }
 
 .login__input:active,
@@ -117,7 +124,7 @@ html {
 }
 
 .login__submit {
-    background: linear-gradient(45deg, #94a2b2, #484d69);
+    background: linear-gradient(45deg,#AACFEE, #5b659ede);
     font-size: 24px;
     margin-left: 0%;
     border-radius: 6px;
@@ -128,6 +135,7 @@ html {
     margin-top: 8%;
     color: #fff;
     transition: .5s;
+    
 }
 
 .login__submit:active,
@@ -138,7 +146,23 @@ html {
     outline: none;
 }
 
+.button2
+{
+    top:10%;
+    left:50%;
+    background:#96a2b200;
+}
 
+.footer{
+    font-family: 'Montserrat', sans-serif;
+    padding: 3px; /* Поля вокруг текста */
+    background: #656696;
+    opacity: 0.8;
+    position: fixed; /* Фиксированное положение */
+    left: 0; bottom: 0; /* Левый нижний угол */
+    color: #fff; /* Цвет текста */
+    width: 100%
+}
 
 /* Изменение placeholder для всех браузеров.*/
 
