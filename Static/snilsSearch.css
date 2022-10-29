@@ -21,24 +21,24 @@ body {
 }
 
 .text {
-    height: 200px;
-    position:absolute;
+    height: 50px;
+    position: fixed;
     line-height: normal;
-    width:50px;
-    font-size: 26px;
+    width:500px;
+    font-size: 29px;
     font-weight: 400;
-    display: flex;
+    display: grid;
     margin-left: 300px;
+    margin-top: -15px;
 }
 
 .logo {
     width: 100px;
     position: fixed;
     display: flex;
-    
-    margin-top: 60px;
     left: 150px;
     opacity: 0.9;
+    margin-top: 35px;
     
 }
 
@@ -59,7 +59,8 @@ html {
 .container {
     font-family: 'Montserrat', sans-serif;
     display: flex;
-    height: 50%;
+    position: relative;
+    height: 0%;
     margin: 0 auto;
     width: 100%;
 }
@@ -70,7 +71,7 @@ html {
     border-top-right-radius: 0px;
     position: top;
     height: 150px;
-    width: 450px;
+    width: 500px;
     box-shadow: 3px 3px 3px rgba(67, 67, 102, 0.5);
     position: relative;
     top: 9%;
